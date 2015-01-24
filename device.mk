@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to ALL condor devices, and
-# are also specific to condor devices
+# This file includes all definitions that apply to ALL ad688g devices, and
+# are also specific to ad688h devices
 #
 # Everything in this directory will become public
 
-LOCAL_PATH := device/motorola/condor
+LOCAL_PATH := device/hisense/ad688g
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -102,15 +102,15 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # currently contain all of the bitmaps at xhdpi density so
 # we do this little trick to fall back to the hdpi version
 # if the xhdpi doesn't exist.
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 DEVICE_PACKAGE_OVERLAYS := \
     $(LOCAL_PATH)/overlay
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 960
-TARGET_SCREEN_WIDTH := 540
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
 
 PRODUCT_PACKAGES += \
     gralloc.msm8610 \
@@ -272,10 +272,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_small_cache_width=1024 \
     ro.hwui.text_small_cache_height=1024 \
     ro.hwui.text_large_cache_width=2048 \
-    ro.hwui.text_large_cache_height=1024
+    ro.hwui.text_large_cache_height=1024 \
+    ro.config.low_ram=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opendelta.device=condor \
+    ro.opendelta.device=ad688g \
     ro.build.version.qcom=AU_LINUX_ANDROID_LNX.LA.3.5.1_RB1.04.04.02.048.020 \
     persist.sys.logkit.ctrlcode=0 \
     ro.vendor.extension_library=/vendor/lib/libqc-opt.so \
