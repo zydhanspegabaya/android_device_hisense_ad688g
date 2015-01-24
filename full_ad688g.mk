@@ -21,12 +21,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from condor device
-$(call inherit-product, device/motorola/condor/device.mk)
+$(call inherit-product, device/hisense/ad688g/device.mk)
 
-PRODUCT_NAME := full_condor
-PRODUCT_DEVICE := condor
-PRODUCT_BRAND := motorola
-PRODUCT_MODEL := condor
-PRODUCT_MANUFACTURER := motorola
+PRODUCT_NAME := full_ad688g
+PRODUCT_DEVICE := AD688G
+PRODUCT_BRAND := Smartfren
+PRODUCT_MODEL := AD688G
+PRODUCT_MANUFACTURER := Hisense
 
-$(call inherit-product-if-exists, vendor/motorola/condor/condor-vendor.mk)
+$(call inherit-product-if-exists, vendor/hisense/ad688g/ad688g-vendor.mk)
